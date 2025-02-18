@@ -26,3 +26,22 @@
     left: 0;
     position: absolute;
 }
+.single-menu-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.items-menu-img {
+    height: 80px;
+    width: 80px;
+    flex-shrink: 0;
+}
+.items-menu-img img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}

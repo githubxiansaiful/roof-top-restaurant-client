@@ -8,11 +8,18 @@ import slide2 from "../../../assets/home/slide2.jpg";
 import slide3 from "../../../assets/home/slide3.jpg";
 import slide4 from "../../../assets/home/slide4.jpg";
 import slide5 from "../../../assets/home/slide5.jpg";
+import SectionTitle from "../../../components/SectionTitle";
 
 const Category = () => {
     return (
         <div className="container">
-            <div className="slide-title py-[100px]">
+            <div className="slide-title py-[60px]">
+                <div className="mb-10">
+                    <SectionTitle
+                        subHeading={"Check out our"}
+                        heading={"All Categories"}
+                    ></SectionTitle>
+                </div>
                 <Swiper
                     modules={[Pagination]}
                     pagination={{ clickable: true }}
@@ -37,11 +44,11 @@ const Category = () => {
                     <SwiperSlide>
                         <img src={slide4} />
                         <h3 className="text-white -mt-[60px] text-5xl font-bold ml-3">Cake</h3>
-                        </SwiperSlide>
+                    </SwiperSlide>
                     <SwiperSlide>
                         <img src={slide5} />
                         <h3 className="text-white -mt-[60px] text-5xl font-bold ml-3">Vegetable</h3>
-                        </SwiperSlide>
+                    </SwiperSlide>
                 </Swiper>
             </div>
         </div>
