@@ -1,7 +1,7 @@
 const Menuitems = ({ item }) => {
     const { image, price, name, recipe } = item;
     return (
-        <div className="single-menu-item">
+        <div className="single-menu-item border border-red-50">
             <div className="items-menu-img">
                 <img src={image} />
             </div>
