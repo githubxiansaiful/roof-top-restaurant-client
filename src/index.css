@@ -5,17 +5,20 @@
     margin: auto;
     max-width: 1200px !important;
 }
+
 @media all and (max-width: 1023px) {
     .container {
         width: 90% !important;
     }
 }
+
 .hero-banner {
     background-image: url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg);
     background-size: cover;
     background-position: center;
     position: relative;
 }
+
 .hero-banner:before {
     content: "";
     background: #000;
@@ -26,6 +29,7 @@
     left: 0;
     position: absolute;
 }
+
 .single-menu-item {
     background: #fff;
     border-radius: 10px;
@@ -35,13 +39,48 @@
     align-items: center;
     gap: 20px;
 }
+
 .items-menu-img {
     height: 80px;
     width: 80px;
     flex-shrink: 0;
 }
+
 .items-menu-img img {
     height: 100%;
     object-fit: cover;
     border-radius: 100px;
+}
+
+ul.react-tabs__tab-list {
+    border: none;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+ul.react-tabs__tab-list .react-tabs__tab {
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px 25px;
+}
+
+ul.react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected {
+    border-color: orange;
+    background: orange;
+}
+
+@media all and (max-width: 767px) {
+    ul.react-tabs__tab-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    ul.react-tabs__tab-list .react-tabs__tab:last-child {
+        grid-column: span 2;
+    }
+
 }

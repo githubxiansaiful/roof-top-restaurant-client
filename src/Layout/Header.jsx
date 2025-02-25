@@ -4,10 +4,10 @@ const Header = () => {
 
     const navItems = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/contact-us">Contact Us</Link></li>
         <li><Link to="/dashboard">Dashboard</Link></li>
         <li><Link to="/our-menu">Our Menu</Link></li>
         <li><Link to="/our-shop">Our Shop</Link></li>
+        <li><Link to="/contact-us">Contact Us</Link></li>
     </>
 
 
@@ -26,7 +26,7 @@ const Header = () => {
                                 {navItems}
                             </ul>
                         </div>
-                        <a className="btn btn-ghost text-xl">daisyUI</a>
+                        <Link className="text-2xl font-bold" to="/">Roof Res</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">

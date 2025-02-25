@@ -9,7 +9,7 @@ const Ourmenu = () => {
     const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setShowContent(true), 2000);
+        const timer = setTimeout(() => setShowContent(true), 1000);
         return () => clearTimeout(timer);
     }, []);
 
