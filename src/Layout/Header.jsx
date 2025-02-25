@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Header = () => {
+
+    const { user, loading, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+        .then(() => {})
+        .catch(error => console.log(error));
+    }
 
     const navItems = <>
         <li><Link to="/">Home</Link></li>
@@ -34,7 +44,24 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <Link className="btn btn-primary" to="/login">Login</Link>
+                        {loading ? (
+                            <div className="skeleton h-[38px] w-[38px] rounded-full"></div>
+                        ) : user ? (
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="User Avatar" />
+                                    </div>
+                                </div>
+                                <ul tabIndex={0} className="mt-3 z-1 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                    <li><button className="justify-between">Profile</button></li>
+                                    <li><button>Settings</button></li>
+                                    <li><button onClick={handleLogOut}>Logout</button></li>
+                                </ul>
+                            </div>
+                        ) : (
+                            <Link className="btn btn-primary" to="/login">Login</Link>
+                        )}
                     </div>
                 </div>
             </div>
