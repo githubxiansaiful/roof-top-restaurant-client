@@ -1,5 +1,6 @@
 import Banner from "./components/Banner";
 import Category from "./components/Category";
+import Chefrecommends from "./components/Chefrecommends";
 import Popularmenus from "./components/Popularmenus";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
             <Banner></Banner>
             <Category></Category>
             <Popularmenus></Popularmenus>
+            <Chefrecommends></Chefrecommends>
         </section>
     );
 };
